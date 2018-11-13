@@ -3,6 +3,13 @@ Dockerized version of ro4block
 
 To run the next tutorial you need to have at least Docker Engine and Docker Compose installed on your system. An easy way to do this is following the steps to install pre-requisites on the Hyperledger Composer Tutorials's website [Installing Prerequisites](https://hyperledger.github.io/composer/latest/installing/installing-prereqs.html)
 
+## Install CORS plugin
+
+Initially, the authentication process in orcid is performed in the frontend directly until the rest server is modified to perform authentication . For this reason, is necessary to install a CORS plugin for web navigator, some options can be:
+
+* [CORS everywhere](https://addons.mozilla.org/es/firefox/addon/cors-everywhere/) for firefox
+* [Moesif Origin](https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc) for chrome
+
 ## Install Hyperledger Fabric
 
 Run the following commands to start a Hyperledger Fabric network to deploy our business networks to.
@@ -70,14 +77,6 @@ If you click 'Advanced' the options below will be shown:
 Then click Add Exception and the next pop up message will ask for confirmation:
 
 ![Confirm](pictures/Confirm.png?raw=true "Confirm")
-
-## Composer Playground
-An easy way to see the changes in the components of the business model is to run hyperledger playground. To do that open a new terminal and run the following commands one by one:
-`````
-docker run -it --net="host" chechocardona/ro4block:1.0 /bin/bash
-composer-playground
-`````
-Next, open a tab in your browser and go to [http://localhost:8080](http://localhost:8080)
 
 ## Running the front end
 Now, to run the application open a new terminal window and run the following commands one by one:
