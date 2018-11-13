@@ -29,11 +29,6 @@ export FABRIC_VERSION=hlfv12
 ./teardownFabric.sh
 ./downloadFabric.sh
 ./startFabric.sh
-
-composer card delete -c PeerAdmin@fabric-network
-composer card delete -c admin@tutorial-network
-
-rm -fr ~/.composer
 `````
 
 ## Run Docker Containers
@@ -125,15 +120,7 @@ docker rmi [ID]
 ./stopFabric.sh
 ./teardownFabric.sh
 `````
-delete the composer cards
-`````
-composer card delete -c name
-`````
-delete the file sytem card store
-`````
-rm -fr ~/.composer
-`````
-and clear the docker cointainers.
+Clear the docker cointainers.
 
 `````
 ./teardownAllDocker.sh
