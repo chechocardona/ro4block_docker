@@ -51,12 +51,13 @@ composer network install -c PeerAdmin@fabric-network -a ../bforos@0.0.1.bna
 `````
 sudo composer network start --networkName bforos --networkVersion 0.0.1 -A admin -S adminpw -c PeerAdmin@fabric-network
 `````
-It is possible that after executing this command you get an error message like the following:
-```
-Error: Error trying start business network. Error: No valid responses from any peers.
-Response from attempted peer comms was an error: Error: Failed to connect before the deadline
-```
-In that case go to the 3rd step on the Cleaning up section and start the Hyperledger Fabric Network again (./startFabric.sh). Then go to Run Docker Containers.
+   It is possible that after executing this command you get an error message like the following:
+      ```
+      Error: Error trying start business network. Error: No valid responses from any peers.
+      Response from attempted peer comms was an error: Error: Failed to connect before the deadline
+      ```
+    In that case go to the 3rd step on the Cleaning up section and start the Hyperledger Fabric Network again (./startFabric.sh).
+    Then go to Run Docker Containers.
 
 5. Lastly we import the business network administrator card, and start the rest server API running over https.
 `````
